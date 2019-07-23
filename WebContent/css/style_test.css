@@ -1,0 +1,36 @@
+body{
+    background-color: rgba(247, 0, 255, 0.212);
+    background-image: url(https://wallpaperplay.com/walls/full/8/2/b/72402.jpg);
+    color: rgb(183, 0, 207);
+    
+}
+
+h1{
+    font-size: 3em;
+    font-weight: bold;
+}
+span{
+    background-color: rgb(255, 153, 0);
+}
+header div{
+    background-color: rgb(0, 47, 255);
+}
+
+div{
+    background-color: yellow
+}
+
+/*cibles toutes les class : "classExemple"*/
+.classExemple{
+    background-color: red
+}
+
+/*cibles toutes les divs avec la class : "classExemple" (plus précis donc prio sur le .class general)*/
+div.classExemple{
+    background-color: pink
+}
+
+/*cibles tous les id : "idExemple" (normalement les id doivent être uniques)*/
+#idExemple{
+    background-color: brown
+}
