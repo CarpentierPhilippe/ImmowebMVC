@@ -1,3 +1,6 @@
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!-- ajouter une annonce -->
 <head>
@@ -29,7 +32,7 @@
         <div style="display:none">
             <!-- Afficher une grande image au milieu -->
             <img class="cover" src="images/Banner.jpg">
-            <!-- Afficher la barre de recherche à l'interieur de l'image -->
+            <!-- Afficher la barre de recherche Ã  l'interieur de l'image -->
             <!-- FORMULAIRE DE RECHERCHE -->
             <span class="centered container">
                     <h1>Recherche</h1>
@@ -149,7 +152,7 @@
         <!-- autres offres -->
         <section>
             <div class="container">
-                <h2>Nouveautés</h2>
+                <h2>NouveautÃ©s</h2>
             </div>
             <div class="row justify-content-md-center">
                 <div class="card-deck col-md-10">

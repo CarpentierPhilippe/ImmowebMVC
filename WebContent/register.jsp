@@ -1,104 +1,136 @@
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
-<!-- ajouter une annonce -->
+<html>
 <head>
-        <meta charset = "utf-8"/>
-        <script src="un_fichier_javascript.js"></script>
-        <title>Register</title>
-        <script src=""></script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link rel="stylesheet" href="css/style.css"/>
+	<title>registerclient</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="fontawesome/css/all.css">
+	<link rel="stylesheet" href="css/style1.css">
+	<script src="jquery/jquery.js"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
+	<script src="js/code.js"></script>
+	
+
 </head>
-
 <body>
-<?php>
-    //chargement du header
-    echo file_get_contents('header.html');
-<?>
-    <!-- ajouter une annonce-->
-    <div class="container">
-    <section class="col-sm-8">
-        <form action="php/register.php" method="POST">
-            <div class="form-group">
-                <label for="username">Email</label>
-                <input type="email" class="form-control" name="username" id="username" placeholder="email@example.com" required>
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
 
-            <div class="form-groups">
-                <label for="password">Mot de passe </label>
-                <input type="password" class="form-control" name="password" id="password" placeholder="Au moins 7 lettres et 1 chiffre" required>
-            </div>
+	<%@ include file="_header.html"%>
+	
+	<div class="container">
+	  <div class="row">
 
-            <div class="form-groups">
-                <p>Votre adresse ne semble pas enregistré dans notre base de donnée.</p>
-                Créer une nouvelle adresse <input type="checkbox" id="newaccount">
-            </div>
+		    <div class="col-lg-6 col-12">
+		    	<section id="couleur1">
+		    		<div class="bg-primary">
+			    		<h4 class="connect pt-2 pb-3">Inscription</h4> 
+			    	</div>
+			    	<form action="" method="post" class="was-validated">
 
-            <span type="hidenewaccount">
-                <div class="form-groups row ">
-                    <div class="col-sm-1 col-form-label">
-                        <label for="fem">Mme </label>
-                        <input type="radio" name="user_type" value="Mme" id="fem">
-                    </div>
-                    <div class="col-sm-1 col-form-label">
-                        <label for="hom">M </label>
-                        <input type="radio" name="user_type" value="M" id="hom">
-                    </div>
-                </div>
-            </span>
+				    	<fieldset class="form-group ml-2">
+						    <div class="row">
+						      	<legend class="col-form-label col-sm-3 col-12 pt-0">Civilité</legend>
+						      	<div class="col-sm-9 col-12">
+							        <div class="form-check">
+							        	<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" required>
+							        	<label class="form-check-label" for="gridRadios1">
+							            	Madame
+							          	</label>
+							        </div>
+							        <div class="form-check">
+							          	<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" required>
+							          	<label class="form-check-label" for="gridRadios2">
+							            	Monsieur
+							          	</label>
+							        </div> 
+						      	</div>
+						    </div>
+						</fieldset>
 
-            <span type="hidenewaccount">
-                <div class="form-groups">
-                    <label for="last_name">Nom</label>
-                    <input type="text" class="form-control" name="last_name" id="last_name" placeholder="" required>
-                </div>
-            </span>
+						<!--div class="form-group row">
+							<div class="form-group col-sm-2 col-12">
+								<label for="user_type">Vous êtes</label>
+							</div>
+							<div class="col-md-4 col-12 col-form-label">
+								<select id="user_type" class="form-control" required>
+									<option selected>Choisir...</option>
+									<option value="moderateur">Moderateur</option>
+									<option value="client">Client</option>
+									<option value="vendeur">Vendeur</option>
+								</select>
+							</div>
+						</div -->
 
-            <span type="hidenewaccount">
-                
-                <div class="form-groups">
-                    <label for="first_name">Prenom : </label>
-                    <input type="text" class="form-control" name="first_name" id="first_name" placeholder="" required>
-                </div>
-            </span>
+						<!-- div class="form-group row">
+						    <label for="name" class="col-sm-3 col-form-label">Votre Avatar</label>
+						    <div class="col-sm-9">
+						      <input type="text" class="form-control" id="name" placeholder="Votre Avatar" required>
+						      <div class="valid-feedback">ok</div> < ces deux div permet de dire que si le champ est valide ou pas>
+						      <div class="invalid-feedback">pas ok</div>
+						    </div>
+				  		</div -->
 
-            <span type="hidenewaccount">
-                    <div class="form-groups">
-                        <label for="passwordtest">Retappez le mot de passe : </label>
-                        <input type="passwordtest" class="form-control" name="passwordtest" id="passwordtest" placeholder="Au moins 7 lettres et 1 chiffre" required>
-                    </div>
-                </span>
+				  		<div class="form-group row">
+						    <label for="last_name" class="col-sm-2 col-12 col-form-label">Nom</label>
+						    <div class="col-sm-10 col-12">
+						      <input type="text" class="form-control" id="last_name" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,30}$">
+						    </div>
+				  		</div>
 
-            <span type="hidenewaccount">
-                <div class="form-groups">
-                    <label for="phone">Téléphone : </label>
-                    <input type="tel" class="form-control" name="phone" id="phone" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$">
-                </div>
-            </span>
+				  		<div class="form-group row">
+						    <label for="first_name" class="col-sm-2 col-12 col-form-label">Prénom</label>
+						    <div class="col-sm-10 col-12">
+						      <input type="text" class="form-control" id="first_name" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,30}$">
+						    </div>
+				  		</div>
 
-            <span type="hidenewaccount">
-                <label for="role" >Role : </label>
-                <select name="role" id="role" required>
-                    <option value="c">Client</option>
-                    <option value="a">Vendeur/loueur</option>
-                    <option value="m">Modérateur</option>
-                </select>
-            </span>
+				  		<div class="form-group row">
+						    <label for="username" class="col-sm-2 col-12 col-form-label">Email</label>
+						    <div class="col-sm-10 col-12">
+						      <input type="email" class="form-control" id="username" placeholder="Votre mail" required>
+						    </div>
+				  		</div>
 
-            <span type="hidemodaretor">
-                    <div class="form-groups">
-                        <label for="name">Nom du compte :</label>
-                        <input type="text" class="form-control" name="name" id="name">
-                    </div>
-            </span>
-            
-            <input type="submit" value="Créé un compte / Se connecter">
+				  		<div class="form-group row">
+						    <label for="password" class="col-sm-3 col-12 col-form-label">Mot de passe</label>
+						    <div class="col-sm-9 col-12">
+						      <input type="password" class="form-control" id="password" placeholder="Votre mot de passe" required pattern="(?=^.{8,} $)((? =.*\D)|(? =.*\W+))(?![.\ N])(?=.*[AZ])(? =.*[az]).*$">
+						    </div>
+				 		 </div>
 
-            <span type="hidemodaretor"></span>
-                <input type="checkbox" required>
-                <a target="_blank" href="cgv.html">J'accepte les CGV</a>
-            </span>
-        </form>
-    </section>
-</div>
+				  		<div class="form-group row">
+						    <label for="phone" class="col-sm-2 col-12 col-form-label">Numéro</label>
+						    <div class="col-sm-10 col-12">
+						      <input type="tel" class="form-control" id="phone" placeholder="Votre Fixe ou Portable" required pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$">
+						    </div>
+				  		</div>
+
+				  		<div class="form-group row ml-2">
+						    <div class="col-sm-10 col-12">
+						      <div class="form-check">
+						        <input class="form-check-input" type="checkbox" id="accord" required>
+						        <label class="form-check-label" for="accord">
+						          <a target="_blank" href="cgu.html">J'accepte les CGU</a>
+						        </label>
+						      </div>
+						    </div>
+				  		</div>
+
+				  		<div class="form-group row ml-2">
+						    <div class="col-sm-10 col-12">
+						      <button type="submit" class="btn btn-primary">S'inscrire</button>
+						    </div>
+				  		</div>
+				    </form>
+			    </section>
+			</div>      
+	  </div>
+	</div>
+
+	<%@ include file="_footer.html" %>
+
 </body>
+</html>

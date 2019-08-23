@@ -1,0 +1,100 @@
+/*---------------------------------------------------------------------HEADER--------------------------------------------------------------------------------------------------------*/
+
+img.log {
+	max-width: 150px; 
+	width: 100px;
+}
+
+.diapo {
+	width: 1000px;
+	background-image: url('../images/homepage1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.diapocontact {
+	width: 600px;
+}
+
+.navcouleur {
+	text-align: center;
+	border-radius: 10px;
+	position: relative;
+	border-style: outset;
+	margin-right: 100px;
+	margin-left: 90px;
+
+}
+
+.modal-header {
+    border-bottom: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius:0;
+}
+
+.modal-footer {
+	border-top: 1px solid #0f7dec;
+}
+
+/*---------------------------------------------------------------------BODY----------------------------------------------------------------------------------------------------------*/
+
+.container{
+	margin-top: 30px;
+}
+
+body {
+	margin: 10px;
+}
+
+#couleur1 {
+	border-style: outset;
+	border-color:  #2870bf;
+}
+
+input {
+	margin: 10px;
+}
+
+.connect {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+label {
+	margin-left: 10px;
+}
+
+form-group {
+	padding-right: 20px;
+}
+
+		/* Contact*/
+.card1 {
+	width: 18rem;
+}		
+
+ul.stile {	/* CGU*/
+	 list-style-type: square;
+}
+
+.compte {
+	margin-right: 100px;
+}
+
+
+/*---------------------------------------------------------------------FOOTER--------------------------------------------------------------------------------------------------------*/
+
+footer {
+	margin: 20px;
+	text-align: center;
+	border-radius: 10px;
+	border-style: outset;
+	margin-bottom: 10px;
+	position: relative;
+	margin-right: 100px;
+	margin-left: 90px;
+}
+
+
+

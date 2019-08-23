@@ -8,10 +8,10 @@
 
         <meta charset = "utf-8"/>
         <!-- plugins -->
-        <script src="pack/jquery-3.4.1.js"></script>
-        <link rel="stylesheet" href="pack/bootstrap-4.3.1-dist/css/bootstrap.css">
-        <script src="pack/bootstrap-4.3.1-dist/js/bootstrap.js"></script>
-        <script src="pack/jQuery-Bootstrap-4-Typeahead-Plugin/bootstrap3-typeahead.js"></script>
+        <script src="jquery-3.4.1/jquery-3.4.1.js"></script>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <script src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+        <script src="jQuery-Bootstrap-4-Typeahead-Plugin/bootstrap3-typeahead.js"></script>
 
         <!-- original -->
         <script type="text/javascript" src="js/depot.js"></script>

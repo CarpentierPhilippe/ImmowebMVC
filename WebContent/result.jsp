@@ -1,53 +1,47 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import = "com.edu.realestate.model.*"  %>
-<%@ page import = "java.util.List"  %>
-<%@ page import = "com.edu.realestate.services.*"  %>
-<%@ page import = "com.edu.realestate.exceptions.*"  %>
-
-
+<%@ page import="com.edu.realestate.model.*" %>
+<%--@ page import="com.edu.realestate.service.*" --%>
+<%@ page import="java.util.*" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+<title>ImmobilierSuperLux</title>
 </head>
 <body>
-<%
+<%! String cid; %>
+<%-- START --%>
+<h1> 	
 
-	ReferenceService service = new ReferenceServiceImpl();
-	String strId = request.getParameter("cityId");
-	SearchCriteria sc = new SearchCriteria();
-	sc.setCityId(Integer.parseInt(strId));
-	
-	List<Advertisement> listAds;
+	<%-- Ce code permet d'afficher dans search.jsp le resultat de notre recherche --%>
+
+<%--
+	List<Advertisement> listAds = new ArrayList<>();
 	try {
-		listAds = service.findAdsByCriteria(sc);
-		if(listAds.size()==0){
-			%> 
-			<H1>			
-				<% out.println("Pas de resultats"); %>
-			</H1>
-			<%
-		}
-		%>
-		<H1>			
-			Nombre de résultats : <% out.println(listAds.size()); %>
-		</H1>
-		<ul><%
-		for (Advertisement ad : listAds){
-			%>
-			<li>
-				<% out.println(ad.getId());%>
-			</li>
-			<%
-		}
-		%></ul><%
-	} catch (RealEstateException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
 
-%>
+		cid = request.getParameter("cityId");
+		ReferenceService service = new ReferenceServiceImpl();
+		Integer id =Integer.parseInt(cid);
+		SearchCriteria sc = new SearchCriteria();
+		sc.setCityId(id);
+		listAds = service.findAdsByCriteria(sc);
+	}
+	catch (Exception ex) {}
+--%>
+<h1>Advertisements</h1>
+<ul>
+
+	<%-- for (Advertisement adv : listAds) { --%>
+	<li>
+		<div>
+			<span><%--= adv.getTitle() --%></span>
+			<div><%--=adv.getDescription()--%></div>
+		</div>
+	</li>
+
+<%-- } --%>
+</ul>	
+
+<%-- END --%>
 </body>
 </html>
